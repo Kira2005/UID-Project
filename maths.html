@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://wallpapers.com/images/hd/mathematics-algebra-and-geometry-euttbljvxcssp6je.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .topnav {
+            display: flex;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            font-weight: bolder;
+            text-transform: uppercase;
+            padding-left: 0;
+        }
+
+        .icon{
+                
+                color: rgb(11, 13, 16);
+                cursor: pointer;
+        }
+
+        .topnav a {
+            color: #fbfbfb;
+            text-decoration: none;
+            padding: 7px;
+            background-color: rgb(0, 170, 255);
+            flex-grow: 1;
+            font-size: 20px;
+
+        }
+
+        .topnav p:hover {
+            background-color: antiquewhite;
+            border-radius: 25px;
+            padding: 13px;
+            width: fit-content;
+            transition: 0.2s;
+            color: rgb(18, 140, 255);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        section h2 {
+            color: #333;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+    </style>
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABa1BMVEX///9t878AAAD8gIaX5PkF4poF6J4DflZN7bKPj48j5qNx9MH4+PhC6a65ubkKzvpv+MP6SVRycnJra2vr6+uc6///hYxfX1+hoaENBgcQEBC2trZ+vs9GaXOKRkni4uLueX/8fILUPkfMZ2x7e3vx8fHIyMj6WGGEhITa2toK1f+VlZU9PT2tra0pKSnPz89LS0scHBw5OTlPT09o6LZbyp9NJykyMjIXFxdZWVkhISGO1upkZGQ7g2dj3K0rYExEl3eiUla4XWIoFBVaiJRoNTcVICM2UloIrdIFYneDJixt3Pn7ZG0yDhEJFBBUu5MpXElLp4MhSjoVLyXG+uU/ICH/ubx6PkH+0dTJR07dcHX9nKDDY2hSKittpLRMc30Jvud63/kDRVMGhqIjNTkDMz4uGBmEMTYCIytRFhoIocTfQUusMjoEW24BFBg3EBMDelMAKxzL+uet08M2eF8bPS8OIRoAlGUExIVZWd6gAAAReElEQVR4nN2d+0MbxxHH0Rk7UaIqAoR42QgbSRYGIZ7mZUA4Js7DMQjqOKZ2Gqep0zZtmrQ26Z/fO93M3u7t4/b29iRz35/s416f29nZ2dm509BQa9nZqQ5ZV6Hdyk+srU47ROsL9q+io1bv6nWr5yy0m0uOQCk8SA0t9649afGMC81lEZ6rpsWr6Mu/dt7a+YorEjxXE9auEkd2CRtbcr4sEFZ3VHwZIFzkkJ4dP5+d/enLL7/MBGGZdZ+vjuavVa5VXN0dGRmZygBhg8Y7fjhXuQbKCmGL4pu9IHjZIaS64PM5mi8rhEEL3r9g+bJCSACPrnHKFOEU14CZIfQHimdzPF9WCBd6Q4SILyuE38zNPn8oBswG4be3XRARXGXuYn7+xZ07d644Yf22sPEuju47rK4s4Z94wsrc0RuH01Ul/FbQhEef8nxXl5BvwItnIj7HGbV213GUmPCbcBNWHor5HKdh77ZjKBFhvbYyNs9ZqAxQeJG63QRclc8aJiEs7HrHvmRbkAZcyU/OFFFClNq0s2Yvj9rYcrYXwxuTEE72jr3PAL4keLutQuQZRnt7lo2uzmtByJKE0E8cfkqHo3MEUCcFO6m/q46a/umK7NYEhFWHb0Mc5Nd0ulcbduYMy1A1OB977QSE0AL0nPAhAkYbqNuNcVGjbXJ1gWbgfEvM1gSEY/6xFxQhDPRbOoBDmF21l+x/AGes0RvNCQvbfjes8E2o5R0x9bFucG3ZLWHKnbYKc8Kyf+hzivBVjH4FhzvTNte9wDU4y5QRmROC1VPzQnSkWoeDjVsOdLArUkDmhHmuGx7FaMIGfytWNMp1FPPrQBafGu2f+1u04jBYY1wjG8qNolDs2RbEOzWIqddX/RPvWCD0j6RGw4o/k5/WORjdDHnURUcm2iRGZTtNcycizsaYEDr1bCXcDWvRxw4VpkL7lh25ghhlUr7TLvEt6/6GrdiErdExRnAiytHM+1uWmB1HZ0Qng1sN/OiMoxDuVVXtRBoR98IHo0s4ITkxFZRKpk2CAd2flNABqdxIXY3BTooFdNq1QHi6Eo+wITkvFXZXjiOvjYJeSI1a9WnJwT35zaGwUcooA4tvxyKUnZ1KA1ckuYtwrO9qzf9Di9qkbMSenSptlHmMMI5NWCGkHI20DTlCmFOsMhsxpnx0k9J3sHEneCwO+ePnrr6AjUxXwEasWiCcoueGF7qEAMNOCwuw92fD48NE43+GrTNkifIR/Hn8q08+ufc9GPcWewGYRi0aEE6xOmbXYi5ehf4uJkSW0AQEu/otinB4+DN/4zRa8WP86+tPXP0AW0NdHQ3agLBXekDpGiv6LyMjIz+LCcHPcOMmDuff0Y14M2QQe/gXl+/eXxy6sSiB123EJxSunwl12yW8IyaEy3PzXgy4pveoNhx/xAAS+nsu4fewcSl8JhxeRwdDWJXdlsROf6QAGRu991fYygfC0BGmBkPYkljWkIad6tlocKb2QAjBk4ryAJA2kNopY6Ofw8YVwYnQHPKDIITetiW8jNpOH+OGrzw/ijYqTJlAjLQyCEI/bSubgTRVdiq0UUmyFdJc5QEQwpkkyYvCcpgmsFN9G2Uu03dCyM/I8k+YJX7M2KkX2mAww9qobEWgTcD6Tuh3w1XJdYLENW2nw+N7N/fI/zVslMyxH/SfEEYqxWIp5jxpO6VF2+iO/DR+Gmm7YB55v2HLS+ZkM4sQIVhPS3Yhyk7FgD0b/VuEjQ4Rn1VPMrdgitgEhQlCQhjvVVlSmN6xdkrk2SjOmRTPCQO3dhLCNwEftWwYQbiIj1YhkT8V2ahyPaCBD0GTkK6QRQWTw9tPflIQMu0FEY3yYjj5+ZFvRMZGlY+p7u8zqUvYdng9Q8AnIyN/VxAygbE/U1+TXcdXeLYrtlFhFi+Qv1NTO9cmyMUeVwjgiLB+RnRuP5qKqqzBqviwndI2GnUOvJIu4VCxNoqCiAg9zV0y110a5dQM+RR/x6isMYR2YTvt2egv8LeoNSv/Ka0Y5bzB7cwHI98//S3R60gFtJ0ICe30NW2jfAYvJL8dlo0I/cALHY1HCK+MRK+MlnWvJ7JTz0b/oWmj2K+2TQhhpfUN1Q19R6OxJgNuMnoBDv0pFZ++puJRjXXVGtyTASH4YVz89SpkHbB53RvXWGKErrC9x/RCTM1E2igJakwIYSzFqC1IqmmcBQg1KmhgoeSzYSGhRnVD3pwQvADvaDQerHYbYohBuxrPSv8F26OdWtPcSuHpBsM9OhqN6q2yJiH0BLoJ2UaMLhZI0A/9Q2hH87XmRcmdRxoZrE46N5kB0Rst0JlGFqv68eGuASFbZVIJHI1ishZIjxAD/VDY1hsQ0U6j+oSfeF4zIIQVBIhoKsFMV6sGQ6sBSOgdDkt7dgpBzW7EgOHPUNYNCMHRXJg4GrxuxLiCi703ucj7nr6d4k7xCeHyvKPRKm7yO5g8TeNJYqMxAzc0rPiEfl76FUX4796WZa1yPUg0qfZVTA9DwbfqLBC8a8+AuevTjoaktTQE7aOqKiI2KgBkg9MxxVmK2M6xCfmI5g7ag47gworZq3z6GwwZGpNg8ihjE0K4xzsavRK8yKCGhNwM1vg44dVMtk2gIccm9KddWGXidcOfog2Pkr+z3JkK06V7j249EtqpfBK1i9eJS1j33f19buokXkziBb1M9mehje55ruVHoT+V2SmYQi0+YaicLchg6L7UBCG/pLYb0xfsssXj3rZbzMIF+lOJnUJ/b8UnDNXNBo5G95WConJ30dSeLJEKF58kT7ZGuk5cwoSOhoS14myuMN29BxudX5gFRHXi289aemN0XELIRxtNnXz5HXFatL/QRseDUoVb2gts0Jm8MTomIUxMX3FTp23dM2A7iUIuxfKowk5Ffhkc1kxsQlxnp1KlI8HT0hOkzwXxiGiJe5gpGZrWXeheCpo3DmGbJL6vGTuaIRyp+EBdvPxLl9OE7RTHfW4opmt2pISqas6jCpcqjfFmT038THAJX1xqgoGAnp2CNbRUhCpAUr0eL4OBAn8SDhGEy9too+sFLtZR2SlsrqsIZV8kc7zPXwBgJRjvtTIYqG1Rs6ON3hqnRGy0TNkw6PU9Vz/AVtZOwR9OULQcYVlelUwAaSON9QrhJH0DoMIqEtyi9Jhqo2Z4hy9cISFbJQfFtkUzQqru2TXSn6fwGccQpgrpZY6a7HqefAtRmBU7WYGwCabkMQmP56ma0qAJYxkpwaEGDHURt2+DolXaQNQzhuAe7EpN+GyW1tFLptrkCemFcV/PwtglaETRKjoRxmV51U7BuXDQrusQzqoqgsnESXvmRASr+UFPlL3t4CkwENUX/QJCsGbMyaoJn4s+WQKO9AkJuuO/YbfAHah4W6TOHSZQEFNNhg4zJnQd6Qs4l8aqWljQiEE0W69tC+98eoIeCNrrwp2c1SCJjm6MIBkTknjN6Luk1fB9uOOFWKEDI/fCNzfJJlPCuwGg0ev0OLrZeo8bhW8tBLNGQ8K7pA/GHSlAWPCs99q3tnCUoyIAM8InOBC6XcDwTWV8H0/ndUV9YT+lTMOI8O6LKdLJjb9Ngu/7qcrv4ioveGzxCSu3X1A1XuYfJqknfkaccFRlFn7UhLMhQnfUv5j9OuBbTfLlFXQK9j49hDbK3JWa8Hie1suHs6+YAratZN9dgZSBwXAqFs4h2SUDNaFaiR/+Etdpksnv2qGUkTnhstaar1Jlb1Jo8bMRvaguPP4YE+ZtDGT15lje6ncxmmOL4fuSENbFUSJR0+536tOUhJCEdyKt2BzC0lM9v/SgLSesi6cz2yu1oq0PV6WsQi9b01BkhNszIRUbC+WrY5yQNliy/ssB748geZddQojgMtyGUG5vUE9zRYRJBINajCsiSMkaVCpcEdVhAruQWUJIKXoZlowSQljt5WOzSQiLBJfev7NJCE3Y9f6dSULMj/zB+08mCSGb8XtmCbEJr2eWEIppPriRVUJswv9ltg2hF/56wxZhuVqtLixUq+/L1J/0wusWCKvF5s4aZuWm1yYWG3ZXkoy0TJowKWE7Lyr/mEieRU0mrHn4KGEblifl1S3NwfxWpS/86OR+MsKq9EupvsaSLNgkE343dCMJYVWVSwWNDigph59+7ZTMCQtNORctmz9tqi+4uae5j40Ji6F0/+XZ20735OSk23l79pT5y9IATBW/etktmRIWWAM97RxslAJtbO5fDrYZYeX8acm0Ddt0A553PbocLfe/J2fULjt9Hh6xtq9rSkj/0OjhZoiOQG6eUrv111Ih5D5z78yI8EFw46cSPp/x5F2wZz+XqXCw3zQjrAe/pHp5IufrMeY6AWL/fsgZfy/j0Lu5+ITVVXLP+zklX4/xIGhG/TcxEgrLjA9yJoRB3aPbgFF8PVPdJ0es9Gf0x1vslEwIgwLkww0dQI/xhByz1hdEWNK99C8fkzBowX1Nvp6lnuNR231ARDcDJhaPMCgz7+oDeg7nEI8TfFLXsjCaOSwZtGHwuwVaXZBmfItHpj6hwp/lOTAgJO/j9MaZmIidPhFiLWcHbzEOISmtPogN6CJ2+2KlWOd4Tm4xBiGJteO3YA/Rc6m//TFlwgnuHvUJJ5MBuogbm5u5UrqI6EcpT69NSN70iOtkaEbv0DQR0RWeUxfVJSQFfLGGCSFmiogYMdNmpkuIx8YY6KVKDTEvuklNQkzJnFoAzOX+4wZHKYwa2JHOmZvUI8Ro9OmGDcBc6b+rKUz78RcVQq5Qi5D8uo3JQCjQRu9kWj+NGEM4XIc8hRbhmPhYU8Hg76xYRcROeBi6SR3CouTYpIT2avOpm3TCHUmDEH8N5tJOJ3R1gHdj9qaUSGTWw8UjGoQPZMcaizSitR/orsMyTBBwxyBEH2xjJCSIJEFlKXeDldqCjhRJiJ9wuLTHxyBaaUVcARN1pEhCTP7as1Efcd8iIlkiEo1mUYTYg9/aBWQQkw4aJAMvnBREEUJOwFIwI0ZM6FHJtI73MhqE6GYsjfUsIsndJBoXyScKJGYWQQhu5iwFQBoxQR6VAMriETUhHm4pHpUj7ppONYiJnskuoiTED6lYdzMEMcj4m62+ESfzTuoolIT51NyMADHiJxyEIsPEuXyJQUWImTmxj7KEGCy/xS7lKUxoACoJ4QnZjWY4RBKjxp0TV7d0AFWE2IQJkmtaiMHS1G6cL0cEv8iqBFQRwjrjebqA3tIUudcYlhp8bOlMvU4rJ8R4LeUmzLHrxJq1NwtBMV3UvFxO2MQnlL6o1TfHaUb3RroaK3JSJyXsUy9ERqqiYSqqaoP+lFT07UkJYSxMJ17jVdqkiqh2Z+TtWJjZDXa81Ai2ZISYnOlPE+a8dRvKUp3VRXEYx1azvtUpJZARQrz3rl+AOWZk9LTSCkOWZ3aYPfSevoyw303oqbRxyhA426OtRrVnsOVGqxaqRT7VrAWREEJnTn0sDKl0cu7o6Vz72UsIYakpjYmvUqVc91KORTTdia7GQokJYWpvLwesL5cxErCjW6zkSUwIQXuakwq5SqXuOzmdc97Vbz9PQkIM2AbQhD2VSpv7Ysjzt4pqT7GEhBAUpTa1j5aLcdB9y3bJp4edg1xcPgkhnDKl7IyuPJjNbqezv7/f6XQ3N3LhUms9iQhhqOhXwKYSVR1vegoRIQwVfR3t05OAECos001e9E8Cwtoghwr74gmxLOFg0LdmSTwh+Bk7lTPvgXjC9Uz5GZ5wEYvfsgLIE8LU1+aq/WAVJsQsQVb8DE8In9rvZ/YiZYUJQX2f+qYnCWF2jFRCmJnBMCcjzMxgmJMQprjo238JCW2VWb4XEhJmyUjFhFkCFBJmykiFhJkyUiHhoO/JrgSE2TLSXO46R5ihmNTVxx/yhAcfZ0cAyBKefpglfXSdJ/z9xvXsiSH8X9YJf7uRRX1IE36QRf06WQ/N8TOoauYJdzJP6Kh/+jIDWlb/eGQG1BoaamW5FZdbQ/8HwRV+GA0AY1kAAAAASUVORK5CYII=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <h1>Mathematics Website</h1>
+    <div class="topnav">
+        <i class="fa fa-home icon"></i><a href="#course-detail"><p class="fr">Course Detail</p></a>
+        <i class="fa fa-book icon"></i><a href="#syllabus"><p class="fr">Syllabus</p></a>
+        <i class="fa fa-desktop icon"></i><a href="#resources"><p class="fr">Resources</p></a>
+        <i class="fa fa-phone icon"></i><a href="#objectives-and-outcomes"><p class="fr">Objectives and Outcomes</p></a>
+    </div>
+</header>
+
+<section id="course-detail">
+    <h2>Course Detail</h2>
+    <p><strong>Course Name:</strong> Single Variable Calculus</p>
+    <p><strong>Code:</strong> 19MAT101</p>
+    <p><strong>Program:</strong> B.Tech. in Electrical and Electronics Engineering, B.Tech. in Civil Engineering, B.Tech. in Aerospace Engineering, B.Tech. in Chemical Engineering, B.Tech. in Mechanical Engineering, B.Tech. in Computer Science and Engineering, B.Tech. in Computer and Communication Engineering, B.Tech. in Electronics and Communication Engineering, B.Tech. in Electronics and Computer Engineering</p>
+    <p><strong>Semester:</strong> One</p>
+</section>
+
+<section id="syllabus">
+    <h2>Syllabus</h2>
+    <h3>Graphs</h3>
+    <p>Functions and their Graphs. Shifting and Scaling of Graphs.</p>
+    <h3>Limit and Continuity</h3>
+    <p>Limit (One Sided and Two Sided) of Functions. Continuous Functions, Discontinuities, Monotonic Functions, Infinite Limits and Limit at Infinity.</p>
+    <h3>Graphing</h3>
+    <p>Extreme Values of Functions, Concavity and Curve Sketching.</p>
+    <h3>Integration</h3>
+    <p>Definite Integrals, The Mean Value Theorem for definite integrals, Fundamental Theorem of Calculus, Integration Techniques.</p>
+    <h3>Evaluation Pattern</h3>
+    <p>Test-1 - 25 marks (one hour test) after 8th lecture. CA – 25 marks (Quizzes / assignments / lab practice) Test – 2- 50 marks (two-hour test) at the end of 15th lecture. Total – 100 marks. Supplementary exam for this course will be conducted as a two-hour test for 100 marks.</p>
+</section>
+
+<section id="resources">
+    <h2>Resources</h2>
+    <ul>
+        <li>'Calculus' by G.B. Thomas Pearson Education, 2009, Eleventh Edition.</li>
+        <li>'Calculus' by Monty J. Strauss, Gerald J. Bradley
+           
+            </section>
+            
+            <section id="objectives-and-outcomes">
+                <h2>Objectives and Outcomes</h2>
+                <table>
+                    <tr>
+                        <th>CO1</th>
+                        <td>To understand the concepts of single variable calculus.</td>
+                    </tr>
+                    <tr>
+                        <th>CO1</th>
+                        <td>To understand and summarize technical documents.</td>
+                    </tr>
+                    <tr>
+                        <th>CO2</th>
+                        <td>To sketch graphs for functions using the concepts of single variable calculus and apply the fundamental theorem of calculus to evaluate integrals.</td>
+                    </tr>
+                </table>
+            </section><br><Br>
+    <footer style="margin: top 10px;">
+        <p>&copy; Amrita Vishwa Vidyapeetham | 2024 </p>
+    </footer>
+</body>
+</html>
