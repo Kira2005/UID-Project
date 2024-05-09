@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>
+            Forgot password
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            body{
+                background-image: url('https://img.freepik.com/premium-photo/dark-dramatic-himalaya-mountain-clouds-hidden-by-fog-nepal_723123-1476.jpg');
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+                padding: 25px;
+                
+            }
+
+            div{
+                justify-content: center;
+                align-items: center;
+            }
+            .fpwd{
+                border: 0.25px solid black;
+                background: #ffffffbf;
+                border-radius: 15px;
+                box-sizing: border-box;
+                padding: 30px 40px;
+                margin: 50px auto;
+                width: 500px;
+            }
+
+            div button{
+                padding: 10px;
+                position: relative;
+            }
+
+            div input{
+                font-size: 15px;
+            }
+
+            .btn{
+                cursor: pointer;
+                border-radius: 300px;
+            }
+            @media screen and (max-width: 1500px){
+                body{
+                    position: fixed;
+                }
+                div{
+                    position: fixed;
+                }
+            }
+
+            *{
+                align-items: center;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+            <div class="heading">
+                <h1 style="text-align: center;">Forgot Password?</h1>
+            </div>
+        
+        <br>
+        <div class="fpwd">
+            <form method="POST">
+                <center><span><i class="fa fa-user"></i>
+                <label id="Email">Email: </label></span>
+                <input type="text" placeholder="email"  required minlength="8" maxlength="10">
+                <br><br><br>
+                <center><span><button class="btn" value="Send OTP">Send OTP</button>   <button class="btn" value="Cancel">Cancel</button></span></center>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,598 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css\style.css">
+
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img
+                        src="data:image/png;base64,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" width="120px"></a>
+                       
+           <!--    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active"  href="#courses">Courses</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#faculty">Faculties</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" >Courses</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html" target="_self">Technical Communication</a></li>
+                                <li><a class="dropdown-item" href="physics.html" target="_self">Modern Physics</a></li>
+                                <li><a class="dropdown-item" href="maths.html" target="_self">Calculus</a></li>
+                                <li><a class="dropdown-item" href="IT-website.html" target="_self">Hardware Essentials</a></li>
+                            </ul>
+                        </li>
+        
+                          
+
+                       
+                        <li class="nav-item">
+                            <a class="nav-link active"  href="login.html">Login </a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="regform.html">Register </a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#contact">Contact Us</a>
+                        </li>
+
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!--CArousel start-->
+    <section class="hero" id="hero">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-background">
+                        <img src="image/slider/slider_1.jpg" alt="meowww">
+                        <div class="carousel-container">
+                            <div class="carousel-content-container">
+                                <h2>Welcome</h2>
+                                <p>Learn from India's top ranked University</p>
+                                <div class="buttons">
+                                    <a href="" class="button1">Our Services</a>
+                                    <a href="#contact" class="button1">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-background">
+                        <img src="image/slider/slier_2.jpg" alt="...">
+                        <div class="carousel-container">
+                            <div class="carousel-content-container">
+                                <h2>Education at Amrita</h2>
+                                <p>Here we provide both education for life and education for living</p>
+
+                                <div class="buttons">
+                                    <a href="" class="button1">Our Services</a>
+                                    <a href="" class="button1">Contact Us</a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" ></span>
+                    
+                </button>
+                
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" ></span>
+                    
+                </button>
+            </div>
+    </section>
+    <!--end carousel-->
+
+    <!--Feature Info Section Start-->
+    <section class="feature mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="main-feature-box">
+                        <div class="icon">
+                            <i class="bi bi-house-door-fill"></i>
+                        </div>
+                        <h3>Professional Teachers</h3>
+                        <p>Professional teachers are essential for good education. They know their subjects well and help students learn in different ways. Their hard work shapes the future by helping students grow smart and thoughtful.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="main-feature-box">
+                        <div class="icon">
+                            <i class="bi bi-align-center"></i>
+                        </div>
+                        <h3>Quality Education</h3>
+                        <p>Quality education lays the foundation for a brighter future. It equips learners with essential knowledge and skills while fostering critical thinking and creativity. </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="main-feature-box">
+                        <div class="icon">
+                            <i class="bi bi-alarm-fill"></i>
+                        </div>
+                        <h3>Always on Time</h3>
+                        <p>Punctuality in a university setting reflects professionalism and respect. It ensures smooth operations, timely classes, and meeting deadlines, fostering accountability and maximizing learning opportunities for all.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="main-feature-box">
+                        <div class="icon">
+                            <i class="bi bi-bank2"></i>
+                        </div>
+                        <h3>We are Pacionates</h3>
+                        <p>In university education, "we are passionate" embodies a fervent commitment to learning and growth. It reflects an enthusiastic community dedicated to excellence and innovation, shaping a brighter future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Feature Info Section End-->
+    <!--about section start-->
+
+    <section class="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 d-none d-lg-flex">
+                    <img src="./image/about/about.jpg" class="img-fluid" alt="">
+
+                </div>
+                <div class="col-md-6">
+                    <div class="about-content">
+                        <span>
+                            About Us
+                        </span>
+                        <h2>Welcome to our University</h2>
+                        <p>Amrita Vishwa Vidyapeetham is a multi-disciplinary, research-intensive, private university, educating a vibrant student population of over 24,000 by 1700+ strong faculty. Accredited with the highest possible ‘A++’ grade by NAAC, Amrita offers more than 250 UG, PG, and Ph.D. programs in Engineering, Management, and Medical Sciences including Ayurveda, Life Sciences, Physical Sciences, Agriculture Sciences, Arts & Humanities, and Social & Behavioral Sciences.</p>
+                        <p>With its extensive network of eight campuses spread across Amaravati, Amritapuri, Bengaluru, Chennai, Coimbatore, Kochi, Mysuru, and NCR Delhi (Faridabad), Amrita University stands as one of India’s preeminent private educational institutions. Encompassing an expansive area of over 1200 acres, these campuses offer an impressive built-up space of more than 100 lakh square feet. </p>
+                        <div class="buttons">
+                            <a href="" class="button-3">Read More<i class="bi bi-arrow-right-circle-fill"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+   <!--about section End-->
+   <!--Courses Section-->
+    <section class="courses mt-5 mb-5">
+        <div class="container" id="courses">
+            <div class="row">
+                <h2 class="text-center">Our Best Courses</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="single-courses-box border">
+                        <div class="icon">
+                            <img src="./image/courses/civil.png" class="img-fluid" alt="" height="60px" width="88px">
+                        </div>
+                        <h3>Technical Communication</h3>
+                        <p>Explore the power of effective communication with our Technical Communication course. Learn to convey complex information clearly and professionally, essential skills for success in today's dynamic workplace.</p>
+                         <div class="buttons">
+                            <a href="index.html" class="button-3">Read More<i class="bi bi-arrow-right-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="single-courses-box border">
+                        <div class="icon">
+                            <img src="./image/courses/computer_engineering.png" class="img-fluid" alt="" height="60px" width="88px">
+                        </div>
+                        <h3>Computer Engineering</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolore atque at, incidunt eum rerum reiciendis, amet laborum ex doloremque, quas ut beatae. Eveniet nesciunt minus impedit nobis aspernatur voluptate?</p>
+                         <div class="buttons">
+                            <a href="" class="button-3">Read More<i class="bi bi-arrow-right-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="single-courses-box border">
+                        <div class="icon">
+                            <img src="./image/courses/dit.png" class="img-fluid" alt="" height="60px" width="88px">
+                        </div>
+                        <h3>Calculus</h3>
+                        <p>At our university, we offer calculus to equip students with essential analytical tools for scientific inquiry and problem-solving. It fosters critical thinking and prepares them for diverse academic and professional pursuits.</p>
+                         <div class="buttons">
+                            <a href="maths.html" class="button-3">Read More<i class="bi bi-arrow-right-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="single-courses-box border">
+                        <div class="icon">
+                            <img src="./image/courses/IT.png" class="img-fluid" alt="" height="60px" width="88px">
+                        </div>
+                        <h3>Computer Hardware Essentials</h3>
+                        <p>Our university offers computer hardware essentials to provide students with foundational knowledge in technology. From understanding circuitry to designing components, it prepares them for innovation and success in the ever-evolving field of computing.</p>
+                         <div class="buttons">
+                            <a href="IT-website.html" class="button-3">Read More<i class="bi bi-arrow-right-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="single-courses-box border">
+                        <div class="icon">
+                            <img src="./image/courses/research.png" class="img-fluid" alt="" height="60px" width="88px">
+                        </div>
+                        <h3>Science</h3>
+                        <p>Science at our university delves into the wonders of the natural world, fostering curiosity and discovery. Through experimentation and exploration, students gain insights into fundamental principles and contribute to advancements shaping our future.</p>
+                         <div class="buttons">
+                            <a href="physics.html" class="button-3">Read More<i class="bi bi-arrow-right-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="single-courses-box border">
+                        <div class="icon">
+                            <img src="./image/courses/software.png" class="img-fluid" alt="" height="60px" width="88px">
+                        </div>
+                        <h3>Information Technology</h3>
+                        <p>Information technology at our university empowers students with practical skills to manage and utilize digital resources effectively. From network administration to cybersecurity, it equips graduates to navigate the dynamic landscape of modern technology with confidence and expertise.</p>
+                         <div class="buttons">
+                            <a href="" class="button-3">Read More<i class="bi bi-arrow-right-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+  <!--Courses Section-->
+  <section class="choose mt-5 mb-5">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Why we choose University</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="choose-item border">
+                    <img src="./image/offer/profesionalTeacher.jpg" class="img-fluid" >
+                    <div>
+                        <h3>Professional Teacher</h3>
+                        <p>Our university boasts a team of dedicated professionals, each with a wealth of expertise in their respective fields. From seasoned academics to industry leaders, our faculty members are committed to nurturing the next generation of leaders through rigorous education and mentorship, ensuring students receive top-tier instruction and guidance throughout their academic journey.</p>
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="col-md-4 mb-3">
+                    <div class="choose-item border">
+                        <img src="./image/offer/project_baced_study.jpg" class="img-fluid" >
+                        <div>
+                            <h3>Project Based Study</h3>
+                            <p>Embark on a journey of practical learning with our project-based study approach, where theory meets hands-on experience. Our university cultivates an environment where students tackle real-world challenges, collaborate with industry leaders, and develop innovative solutions, empowering them to excel in their chosen fields.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="choose-item border">
+                            <img src="./image/offer/real-worl_development.jpg" class="img-fluid" >
+                            <div>
+                                <h3>Real World Development</h3>
+                                <p>In our Real World Development column, discover how our university cultivates practical skills through hands-on projects, industry partnerships, and experiential learning opportunities. From internships with leading companies to community outreach initiatives, we empower students to apply their knowledge in real-world contexts, preparing them for successful careers beyond the classroom.</p>
+                            </div>
+                        </div>
+                        </div>
+
+
+            </div>
+        </div>
+ 
+  </section>
+
+
+  <!--Faculties-->
+  <section class="choose mt-5 mb-5" id="faculty">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Faculties</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="choose-item border">
+                    <img src="https://media.istockphoto.com/id/1152078164/photo/adult-student-holding-laptop.jpg?s=612x612&w=0&k=20&c=kL76PjfRU1n8cPdIo7-16CXodJa_M1d13BcClDUyZk8=" width="400px" height="245px"  >
+                    <div>
+                        <h3>
+                            Dr. Sophia Patel</h3> <h6>Ed.D.<br>
+                                Associate Professor
+                                Field: Educational Psychology
+                                Education:
+                                
+                                Ed.D. in Educational Psychology, Harvard University
+                           <br>M.A. in Counseling Psychology, Columbia University
+                            </h6>
+                        <p>Dr. Patel is committed to empowering students through her expertise in educational psychology, promoting holistic development and fostering a supportive learning environment.</p>
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="col-md-4 mb-3">
+                    <div class="choose-item border">
+                        <img src="https://media.istockphoto.com/id/1365527907/photo/portrait-of-smiling-mature-teacher-with-laptop-in-the-classroom.jpg?b=1&s=612x612&w=0&k=20&c=WrdSgumLgcs6ZUjuyKcOgKKpLVrzx6dtibOAZzDAOz4=" width="400px" >
+                        <div>
+                            <h3>
+                                Dr. Emily Johnson</h3> <h6>Ph.D.<br>
+    
+                                Assistant Professor
+                                Field: Environmental Science
+                                Education:
+                                
+                                Ph.D. in Environmental Biology, Stanford University<br>
+                                M.S. in Ecology, University of California, Berkeley</h6>
+                            <p>Dr. Johnson is a passionate educator dedicated to fostering a deep understanding of environmental science through innovative teaching methods and hands-on research experiences.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="choose-item border">
+                            <img src="https://t3.ftcdn.net/jpg/02/25/43/84/360_F_225438459_rf2TFCzW8MohNc2jD98Fu9UZg9fAbkBJ.jpg" class="img-fluid" >
+                            <div>
+                                <h3>
+                                    Dr. James Rodriguez
+                                    </h3> <h6>Ph.D.<br>
+                                        Associate Professor
+                                        Field: Computer Engineering
+                                        Education:
+                                        
+                                        Ph.D. in Computer Engineering, Massachusetts Institute of Technology
+                                    <br>
+                                    B.S. in Electrical Engineering, University of California, Berkeley     </h6>
+                                <p>Dr. Rodriguez specializes in computer hardware, guiding students through the intricacies of hardware design and architecture, preparing them for cutting-edge technological advancements.</p>
+                            </div>
+                        </div>
+                        </div>
+
+
+                        <div class="col-md-4 mb-3">
+                            <div class="choose-item border">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/036/729/534/small_2x/ai-generated-a-smiling-woman-standing-in-a-classroom-free-photo.jpg" width="400px" height="250px"  >
+                                <div>
+                                    <h3>Dr. Isabella Chen
+                                       </h3> <h6>MFA<br>
+            
+                                        Assistant Professor
+                                        Field: Creative Writing
+                                        Education:
+                                        
+                                        MFA in Creative Writing, University of Iowa<br>
+                                        B.A. in English Literature, Yale University</h6>
+                                    <p>Dr. Chen inspires creativity and self-expression in her students, leveraging her diverse background in literature and writing to cultivate imaginative storytelling and critical thinking skills.
+
+
+
+
+
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+
+
+                            <div class="col-md-4 mb-3">
+                                <div class="choose-item border">
+                                    <img src="https://media.istockphoto.com/id/610021016/photo/young-professor.jpg?b=1&s=612x612&w=0&k=20&c=fN2HbM801SKoNTmgk7LPVhgavsqWXI3d4iDLZOm5rtE=" width="400px" height="250px"  >
+                                    <div>
+                                        <h3>Dr. Marco Costa
+                                            </h3> <h6>Ph.D.<br>
+                                                Associate Professor
+                                                Field: Archaeology
+                                                Education:
+                                                
+                                                Ph.D. in Archaeology, University of Oxford
+                                           <br>M.A. in Ancient History, University of Rome
+
+
+                                          </h6>
+                                        <p>
+                                            Dr. Costa's expertise in archaeology spans ancient civilizations, enriching students' understanding of human history through immersive fieldwork and scholarly exploration.
+
+
+
+                                        </p>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="choose-item border">
+                                        <img src="https://as2.ftcdn.net/v2/jpg/05/49/21/05/1000_F_549210552_RLS1aqcPfLGBvFiZA0EtBcmGCTBJFzZu.jpg" width="400px" height="250px"  >
+                                        <div>
+                                            <h3>
+                                                Dr. Rajesh Patel</h3> <h6>Ph.D.<br>
+                    
+                                               Professor
+                                                Field: Mathematics
+                                                Education:
+                                                
+                                                Ph.D. in Mathematics, Princeton University<br>
+                                                M.S. in Applied Mathematics, Indian Institute of Technology (IIT)</h6>
+                                            <p>Dr. Patel brings a passion for calculus and a deep understanding of mathematical concepts to his teaching, empowering students to master the fundamental principles of calculus with clarity and rigor.</p>
+                                        </div>
+                                    </div>
+                                    </div>
+
+
+            </div>
+        </div>
+ 
+  </section>
+
+  <!--Faculties end-->
+
+<!-- Footer -->
+<footer class="text-center text-lg-start  text-white pt-4" style="background-color:rgb(37, 37, 133) ;" id="contact">
+    
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+             University
+            </h6>
+            <p>
+             
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Home</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">About</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Gallery</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Contact</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Privacy and Policy</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p> Amritapuri, Vallikavu 10012, KL</p>
+            <p>
+              
+              info@example.com
+            </p>
+            <p> + 01 234 567 88</p>
+            <p>+ 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="">Aleena Sebastian</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

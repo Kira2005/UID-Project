@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Register
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-image: url('johnny-briggs-cJ-RyUD2ayc-unsplash.jpg');
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+                font-family: Arial, sans-serif;
+            }
+
+            i{
+                color:blue;
+            }
+
+            .reg{
+                padding: 30px;
+                border: 2px solid black;
+                border-radius: 10px;
+                box-sizing: border-box;
+                width: 500px;
+                padding: 25px;
+                margin: 50px auto;
+                border-top: 7px solid rgb(66, 66, 179);
+                box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+                background-color: rgb(182, 182, 212);
+            }
+
+            .reg h2{
+                font-size: 30px;
+                line-height: 24px;
+                padding: 30px;
+                text-align: center;
+            }
+
+            .input-name{
+                margin: 20px auto;
+                position: relative;
+                width: 90%;
+            }
+
+            .lock{
+                padding: 8px 11px;
+            }
+
+            #name{
+                padding: 8px 0px 8px 40px;
+                
+            }
+            #name1, #name2{
+                padding: 8px 0px 8px 40px;
+                margin: 0;
+            }
+
+
+            .text-name{
+                padding: 8px 0px 8px 40px;
+            }
+            .input-name span{
+                margin-left: 35px;
+                position: relative;
+                display: inline-block;
+            }
+
+            .input-name i{
+                position: absolute;
+                font-size: 18px;
+                border-right: 1px solid;
+            }
+            #eye, #eye2{
+                position: absolute;
+                right: 10px;
+            }
+
+            .text-name, .input-name{
+                transition: all 0.30s ease-in-out;
+            }
+            .text-name:focus, .input-name:focus{
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+
+            #gen, #place{
+                display: inline-block;
+                height: 30px;
+                padding: 5px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                border-radius: 5px;
+            }
+            
+            .btn{
+                background-color: blue;
+                color: whitesmoke;
+                height: 35px;
+                line-height: 35px;
+                width: 100%;
+                border: none;
+                outline: none;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .btn:hover{
+                background-color: rgb(43, 122, 226);
+                cursor: pointer;
+            }
+
+            @media (max-width:480px){
+                .container{
+                    width: 100%;
+                }
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhMzhmwIwcwGyUdw8im9xJk-6NU2V_e_BTBw&s">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="reg">
+        <h2> Registration form</h2>
+        <form method="POST">
+            <div class="input-name">
+            
+            <span><i class="fa fa-user lock"></i><input type="text" placeholder="First Name*" id="name1" size="40" required></span><br><br>
+            <span><i class="fa fa-user lock"></i><input type="text" placeholder="Middle Name*" id="name2" size="40" required></span><br><br>
+            <span><i class="fa fa-user lock"></i><input type="text" placeholder="Last Name*" id="name" size="40" required></span><br><br>
+            <span><br><i class="fa fa-envelope lock"></i><input type="text" class="text-name" placeholder=" Email*" id="email" size="40" maxlength="25" required></span><br><br>
+            <span>Enter Birthday: <input class="text-name" type="date" id="bday" required></span>
+            <span style="position: relative;"><br><i class="fa fa-lock lock" ></i><input type="password" placeholder="Password*" size="40" required class="text-name" id="pwd"><i class="fa fa-eye lock" style="cursor: pointer; border: none;" id="eye"></i></span><br><br>
+
+
+            <script>
+            // show and hide password
+            const showPassword = document.querySelector("#eye");
+            const passwordField = document.querySelector("#pwd");
+
+            showPassword.addEventListener("click",function(){
+            this.classList.toggle("fa-eye-slash");
+            const type = passwordField.getAttribute("type")==="password" ? "text" : "password";
+            passwordField.setAttribute("type",type);
+        })
+        const showPassword1 = document.querySelector("#eye2");
+        const passwordField1 = document.querySelector("#pwd2");
+
+            showPassword1.addEventListener("click",function(){
+            this.classList.toggle("fa-eye-slash");
+            const type = passwordField1.getAttribute("type")==="password" ? "text" : "password";
+            passwordField1.setAttribute("type",type);
+        })
+
+        function verify(){
+            const pwd1 = document.getElementById('pwd').value;
+            const pwd2 = document.getElementById('pwd2').value;
+
+            if(pwd1===pwd2){
+                document.write("Passwords matched.")
+            }else{
+                event.preventDefault();
+                document.getElementById('error').innerText = "Passwords do not match.";
+                document.getElementById('pwd2').value="";
+            }
+        }
+        const fn = document.getElementById('name1');
+        const mn = document.getElementById('name2');
+        const ln = document.getElementById('name');
+        const em = document.getElementById('email');
+        const bd = document.getElementById('bday');
+        const p1 = dpcument.getElementById('pwd');
+        const p2 = dpcument.getElementById('pwd2');
+        function incomplete(){
+            
+        }
+        </script>
+
+
+        <span><br><i class="fa fa-lock lock" ></i><input type="password" placeholder="Confirm Password*" size="40" required class="text-name" id="pwd2"><i class="fa fa-eye lock" style="cursor: pointer; border: none;" id="eye2"></i><br><br>
+            <i class='fas fa-circle-exclamation' style='color: red;'></i><p id="error" style="color: red;"></p></span>
+        <span><select id="gen" style="font-size: 18px;" required>
+            <option value="select">Select Gender*</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select></span>
+        <span>
+            <select id="place" style="font-size: 18px;" class="country" required>
+                <option value="sel">Select Country*</option>
+                <option value="India">India</option>
+                <option value="US">USA</option>
+                <option value="UK">UK</option>
+                <option value="Germany">Germany</option>
+                <option value="New Zealand">New Zealand</option>
+            </select>
+        </span>
+        <br><br><br>
+        <span><label for="address">Enter address*:</label><br>  <textarea style="font-family: Arial, Helvetica, sans-serif;" name="address" rows="3" cols="30" required></textarea></span><br><br>
+        <div class="mandatory" style="color: red;"><span>Fields marked * are required.</span></div>
+        <div class="input-name">
+            <center>
+            <input type="submit" value="Register" class="btn" onclick="verify()"></center>
+        </div>
+        </div>
+        </form>
+    </div>
+    </body>
+</html>
