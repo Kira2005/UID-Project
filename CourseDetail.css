@@ -1,0 +1,72 @@
+/* Define styles specific to the CourseDetail component */
+.course-detail {
+    padding: 20px;
+}
+
+.course-detail .topnav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--primary);
+    padding: 10px;
+}
+
+.course-detail .topnav a {
+    color: var(--light);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.course-detail .topnav a:hover {
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+.course-detail .content {
+    margin-top: 20px;
+}
+
+.course-detail .head {
+    font-family: 'Abril Fatface', cursive;
+    color: var(--primary);
+}
+
+.course-detail .box {
+    background-color: var(--light);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-detail table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.course-detail table, .course-detail th, .course-detail td {
+    border: 1px solid var(--primary);
+}
+
+.course-detail th, .course-detail td {
+    padding: 8px;
+    text-align: left;
+}
+
+.course-detail th {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.course-detail footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--light);
+    margin-top: 20px;
+}
+
+
+
